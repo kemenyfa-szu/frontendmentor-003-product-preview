@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /*PALETTE*/
+    /* DON'T USE THEM, THEY ARE JUST FOR SHOWCAE IN VSCODE*/
+    ---plt-dark-cyan: hsl(158, 36%, 37%);
+    ---plt-cream: hsl(30, 38%, 92%);
+
+    --plt-very-dark-blue: hsl(212, 21%, 14%);
+    --plt-dark-grayish-blue: hsl(228, 12%, 48%);
+    --plt-white: hsl(0, 0%, 100%);
+
+    /*HSL VALUES*/
+    --dark-cyan: 158, 36%, 37%;
+    --cream: 30, 38%, 92%;
+
+    --very-dark-blue: 212, 21%, 14%;
+    --dark-grayish-blue: 228, 12%, 48%;
+    --white: 0, 0%, 100%;
+
+    /*COLORS*/
+    --dark-cyan-clr: hsl(var(--dark-cyan));
+    --cream-clr: hsl(var(--cream));
+
+    --very-dark-blue-clr: hsl(var(--very-dark-blue));
+    --dark-grayish-blue-clr: hsl(var(--dark-grayish-blue));
+    --white-clr: hsl(var(--white));
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black; /*var(--cream-clr);*/
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+h1, h2, h3, .accent {
+    font-family: 'Fraunces', serif;
+}
+p {
+    color: var(--dark-grayish-blue-clr);
+    line-height: 1.6;
+}
+
+.product-card {
+    background-color: var(--white-clr);
+    display: flex;
+    max-height: 450px;
+    max-width: 37.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.prod-picture {
+    background-image: url("./images/image-product-desktop.jpg");
+    width: 50%;
+}
+
+.prod-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-top: 1.75rem;
+    min-height: 100%;
+}
+
+.prod-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h2 {
+    color: var(--very-dark-blue-clr);
+    font-size: 2rem;
+    line-height: 1;
+}
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.price {
+    display: inline;
+}
+.new-price {
+    font-family: 'Fraunces', serif;
+    color: var(--dark-cyan-clr);
+    font-size: 2rem;
+}
+.orig-price {
+    font-size: 0.8rem;
+    text-decoration-line: line-through;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: var(--dark-cyan-clr);
+    color: var(--white-clr);
+    border-radius: 0.5rem;
+    padding: 0;
+    font-weight: 700;
+    height: 3rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 599px) {
+    .product-card {
+        flex-direction: column;
+    }
+}
