@@ -6,8 +6,9 @@
 :root {
     /*PALETTE*/
     /* DON'T USE THEM, THEY ARE JUST FOR SHOWCAE IN VSCODE*/
-    ---plt-dark-cyan: hsl(158, 36%, 37%);
-    ---plt-cream: hsl(30, 38%, 92%);
+    --plt-dark-cyan: hsl(158, 36%, 37%);
+    --plt-dark-cyan-hover: hsl(158, 36%, 20%);
+    --plt-cream: hsl(30, 38%, 92%);
 
     --plt-very-dark-blue: hsl(212, 21%, 14%);
     --plt-dark-grayish-blue: hsl(228, 12%, 48%);
@@ -15,6 +16,7 @@
 
     /*HSL VALUES*/
     --dark-cyan: 158, 36%, 37%;
+    --dark-cyan-hover: 158, 36%, 20%;
     --cream: 30, 38%, 92%;
 
     --very-dark-blue: 212, 21%, 14%;
@@ -23,6 +25,7 @@
 
     /*COLORS*/
     --dark-cyan-clr: hsl(var(--dark-cyan));
+    --dark-cyan-hover-clr: hsl(var(--dark-cyan-hover));
     --cream-clr: hsl(var(--cream));
 
     --very-dark-blue-clr: hsl(var(--very-dark-blue));
@@ -118,6 +121,10 @@ button {
     font-weight: 700;
     height: 3rem;
     letter-spacing: 0.5px;
+}
+button:hover {
+    background-color: var(--dark-cyan-hover-clr);
+    cursor: pointer;
 }
 
 .attribution {
