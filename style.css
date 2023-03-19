@@ -33,7 +33,9 @@
 body {
     font-size: 0.875rem;
     font-family: 'Montserrat', sans-serif;
-    background-color: black; /*var(--cream-clr);*/
+    background-color: var(--cream-clr);
+    padding: 1rem;
+    padding-top: 0.5rem;
 }
 
 main {
@@ -41,29 +43,25 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
 }
 
-h1, h2, h3, .accent {
+h1, h2, h3 {
     font-family: 'Fraunces', serif;
+    margin-bottom: 0.5rem;
 }
 p {
     color: var(--dark-grayish-blue-clr);
-    line-height: 1.6;
+    margin-bottom: 0.25rem;
 }
 
 .product-card {
+    max-height: 450px;
     background-color: var(--white-clr);
     display: flex;
-    max-height: 450px;
     max-width: 37.5rem;
     border-radius: 0.5rem;
     overflow: hidden;
-}
-
-.prod-picture {
-    background-image: url("./images/image-product-desktop.jpg");
-    width: 50%;
+    margin-bottom: 1rem;
 }
 
 .prod-details {
@@ -71,8 +69,6 @@ p {
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    padding-top: 1.75rem;
-    min-height: 100%;
 }
 
 .prod-category {
@@ -80,16 +76,21 @@ p {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
-
-h2 {
+.prod-name {
     color: var(--very-dark-blue-clr);
     font-size: 2rem;
     line-height: 1;
 }
+.prod-description {
+    line-height: 1.6;
+}
+
 .prices {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .price {
     display: inline;
@@ -116,11 +117,45 @@ button {
     padding: 0;
     font-weight: 700;
     height: 3rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 0.5rem;
+    visibility: hidden;
 }
 
 @media screen and (max-width: 599px) {
-    .product-card {
-        flex-direction: column;
+    body {
+        padding-top: 1.75rem;
     }
+    main {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: start;
+    }
+    .product-card {
+        max-height: fit-content;
+        flex-direction: column;
+        max-height: auto;
+    }
+    .prod-pic {
+        width: 100%;
+        height: auto;
+    }
+    .prod-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        padding-top: 1.125rem;
+    }
+    .prod-category {
+        margin-bottom: 0.75rem;
+    }
+    .prod-name {
+        margin-bottom: 1rem;
+    }
+
 }
